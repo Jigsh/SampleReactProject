@@ -1,0 +1,289 @@
+/*....................Bottom Panel CSS...........*/
+.homePanel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bottomParent {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: #000000;
+  white-space: nowrap;
+  display: none;
+}
+.staticPanelBottom div {
+  display: inline-block;
+  margin: 0% 0% 0% 5%;
+}
+/*.........................................................*/
+
+.navbarParent .iconBlock {
+    border-left:2px solid #FFFFFF;
+    border-bottom:2px solid #FFFFFF;
+    border-right:2px solid #FFFFFF;
+    padding: 3px;
+}
+
+.navbarParent button {
+  background: transparent;
+  border: none;
+}
+
+.navbarParent .iconbar li {
+  margin-right: 30px;
+}
+.imageSpacing .imageSpacing {
+  margin-right: 10px;
+}
+
+.navbarParent label {
+  color: #FFFFFF;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.logoutParent {
+  position: relative;
+  float: left;
+  display: inline-block;
+  top: 20px;
+  margin-right: 20px;
+}
+
+.langParent {
+  position: relative;
+  float: left;
+  display: inline-block;
+  top: 15px;
+    margin-right: 40px;
+}
+
+.langParent div {
+  display: inline-block;
+}
+
+.navbarParent .dimensions-flag {
+    width: 28px;
+    height: 27px;
+    cursor: pointer;
+    padding: 2px;
+    margin: 4px;
+}
+
+.navbarParent .dimensions-home-logo-olympics {
+    width: 85px;
+    height: 60px;
+    margin-top: -5px;
+  }
+
+.bottomParent .dimensions-home-logo-olympics {
+      width: 85px;
+      height: 50px;
+    }
+
+.navbarParent .navbar {
+  border: none;
+  border-radius: 0;
+}
+
+.signOutPanel {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  z-index: 100;
+}
+.staticPanelData div {
+  display: inline-block;
+}
+
+.staticPanelData label {
+  font-size: 18px;
+}
+
+.iconParent {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.iconParent .iconBlock {
+  display: inline-block;
+}
+
+.searchboxParent {
+  text-align: center;
+}
+
+.searchboxParent div {
+  margin-top: 12px;
+}
+
+
+.staticPanelData{
+  position: relative;
+  float: left;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.staticPanelData div {
+  margin-right: 5%;
+}
+
+.navbarHeader {
+  width: 100%;
+}
+
+.iconBox {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+.underline {
+  border: 1px solid #000000;
+  position: relative;
+}
+.langText, .underline {
+  display: none;
+}
+
+.searchIcon {
+  display: none;
+}
+/*..............global things for all screen sizes................*/
+@media (max-width: 1200px)
+{
+  .navbarParent .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin: 0;
+  }
+  /*.....popup panel design.........*/
+
+  .navbarParent .dimensions-flag {
+      border: 1px solid #000;
+  }
+  .signOutPanel {
+    width: 15%;
+  }
+  .signOutPanel {
+    background: #CCCCCC;
+  }
+  .langText,.underline {
+    display: block;
+  }
+  .logoutParent {
+    width: 100%;
+    padding: 10px;
+    top: 0;
+  }
+  .langParent {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 15px;
+    top: 0;
+    margin: 0;
+  }
+  /*.................................*/
+
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+    margin-right: 0px;
+    z-index: 2;
+    border-radius: 0;
+    margin-top : 0;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+  }
+  .navbar-collapse.collapse.in{
+    display:block !important;
+  }
+
+  .iconLabel {
+    display: none;
+  }
+}
+/*................................................................*/
+
+/*..............screen size 1200 to 768................*/
+@media (max-width: 1200px)
+{
+  .searchboxParent {
+    text-align: left;
+    margin-left: 10%;
+  }
+  .searchboxParent div {
+    width: 60%;
+    display: inline-block;
+  }
+  .iconBox {
+    width: 32%;
+  }
+  .iconParent {
+    text-align: left;
+    margin-left: -7%;
+  }
+
+}
+/*........................................*/
+
+/*.......................screen sizes 768................*/
+@media (max-width: 768px)
+{
+  .signOutPanel {
+    width: 20%;
+  }
+  .bottomParent {
+    display: block;
+  }
+  .searchIcon {
+    display: inline-block;
+    margin-left: 20%;
+  }
+  .staticPanelData {
+    display: none;
+  }
+  .searchboxParent {
+    display: none;
+  }
+
+  .searchboxParent div {
+    width: 60%;
+    display: inline-block;
+  }
+
+  .iconBox {
+    width: 14%;
+  }
+  .iconParent {
+    position: absolute;
+    text-align: left;
+    margin-left: -7%;
+    width: 100%;
+  }
+}
+/*............................................*/
+/*.................Screen size < 320*/
+@media (max-width: 340px)
+{
+  .signOutPanel {
+    width: 40%;
+  }
+
+  .searchIcon {
+    margin-left: 7%;
+  }
+
+
+    .iconBox {
+      width: 16%;
+    }
+}

@@ -1,0 +1,189 @@
+* {
+ font-family: Verdana;
+}
+
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+.absolute-center {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.align-text-center {
+    text-align: center;
+}
+.align-text-right {
+    text-align: right;
+}
+.align-text-left {
+    text-align: left;
+}
+.align-captcha-center {
+    width: 67%;
+    margin: 0 auto;
+}
+.main {
+    margin-top: 70px;
+}
+.main-login {
+    background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.dimensions-login {
+    width: 350px;
+    height: 500px;
+    max-width: 350px;
+}
+.dimensions-forgot {
+    width: 500px;
+    height: 375px;
+    max-width: 500px;
+}
+.dimensions-reg {
+    width: 530px;
+    height: 500px;
+    max-width: 630px;
+}
+.dimensions-default-logo-atos {
+    width: 240px;
+    height: 89x;
+}
+.dimensions-bw-logo-atos {
+    width: 86px;
+    height: 46x;
+}
+.dimensions-home-logo-olympics {
+    width: 82px;
+    height: 51px;
+}
+.dimensions-reg-logo-atos {
+    width: 144px;
+    height: 54x;
+}
+.dimensions-logo-olympics {
+    width: 98px;
+    height: 61px;
+}
+.dimensions-logo-facebook {
+    width: 70px;
+    height: 23px;
+}
+.dimensions-home-search {
+    width: 50px;
+}
+.dimensions-flag {
+	width: 35px;
+    height: 33px;
+}
+.dimensions-profile-pic {
+	width: 125px;
+    height: 40px;
+}
+.main-center {
+    padding: 10px 40px;
+   /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.reg-label-width {
+    width: 223px;
+}
+.inline-display {
+    display: inline;
+}
+.padding-div-top {
+    padding-top: 10px;
+}
+.padding-container {
+    padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 20px;
+}
+.padding-flag {
+	padding-top: 16px;
+	padding-left: 10px;
+}
+.padding-profile-pic {
+	padding-top: 12px;
+	padding-left: 10px;
+	padding-right: 90px;
+}
+.login-padding-initial {
+    padding-top: 40px;
+}
+td.container-atos-logo-width {
+    width: 80%;
+}
+.color-atos-blue {
+    color: rgb(0, 110, 173);
+}
+.field-required:after {
+    content: " *";
+    color: red;
+}
+.tooltip {
+    opacity: 0.7 !important;
+    background-color: #ff6666 !important;
+}
+.home-container-table{
+	 width:100%;
+	 height:89%;
+	 position: absolute;
+	 top: 70px;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+table, th,td {
+	  border:0px solid black;
+}
+.color-home-block {
+	color: white;
+	background-color: rgb(1, 122, 195) !important;
+}
+.td-home-main {
+	vertical-align: top;
+}
+a.link {
+    color: white;
+	text-decoration: underline;
+}
+.home-font-main-heading {
+	font-size: 30px;
+}
+.home-font-heading {
+	font-size: 15px;
+}
+.home-font-info {
+	font-size: 11px;
+}
+.color-bg-blue{
+	background-color: rgb(0, 32, 99) !important;
+}
+nav.nav-bar {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  background: #000 !important;
+  background-color: rgb(0, 32, 99) !important;
+}
+
+.hideTooltip {
+  display: none !important;
+}
