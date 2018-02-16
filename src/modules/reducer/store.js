@@ -1,4 +1,4 @@
-import reducer from './registerReducer.js';
+import reducer from './combineReducers'
 import {createStore,compose} from 'redux';
 import {applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';

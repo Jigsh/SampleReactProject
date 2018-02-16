@@ -6,7 +6,8 @@ import {
     Link, Switch, Redirect, withRouter
 } from 'react-router-dom';
 
-import Register from './components/Register.js';
+import Register from './components/Register';
+import Login from './containers/Login'
 import { Provider } from 'react-redux';
 import store from './modules/reducer/store.js'
 
@@ -16,7 +17,7 @@ ReactDOM.render((
 	<Router>
         <Switch>
             <Route exact path="/" />
-            <Route exact path="/login" />
+            <Route exact path="/login" component={Login}/>
             <Route exact path="/reg" component={Register}/>
               <Route exact path="/forgot" />
               <Route exact path="/home" />

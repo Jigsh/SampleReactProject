@@ -1,4 +1,3 @@
-import * as register from '../actions/register.js'
 
 
 const initialState = {
@@ -10,12 +9,13 @@ const initialState = {
 }
 
 
-const reducer = (state = initialState , action)=> {
-    debugger
+const registerReducer = (state = {},action)=> {
+
     console.log(action.type);
     switch(action.type){
 
         case "REGISTER_USER" :
+            debugger;
             return Object.assign({},state,{user : action.payload})
             break;
         default:
@@ -24,4 +24,5 @@ const reducer = (state = initialState , action)=> {
     }
 }
 
-export default reducer;
+
+export default registerReducer;

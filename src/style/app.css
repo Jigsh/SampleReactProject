@@ -131,6 +131,10 @@ input::-webkit-input-placeholder {
 td.container-atos-logo-width {
     width: 80%;
 }
+
+td.align-right {
+    text-align: right;
+}
 .color-atos-blue {
     color: rgb(0, 110, 173);
 }
@@ -186,4 +190,79 @@ nav.nav-bar {
 
 .hideTooltip {
   display: none !important;
+}
+.card {
+    background-color: #F7F7F7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    border-radius: 12px;
+    box-shadow: 4px 6px 11px rgba(0, 0, 0, 0.3);
+}
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+.textField{
+    margin-bottom: 20px;
+}
+
+.loginLabel{
+    padding: 8px 20px 8px 20px;
+    background-color: forestgreen;
+    color: white;
+    width: 78px;
+    height: 38px;
+    border-radius: 9px;
+    position: absolute;
+    top: 34px;
+    margin-left: 100px;
+}
+.backgroundImageLogin{
+    /* background-color: yellowgreen; */
+    background-image: url('../images/login.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+}
+
+.backgroundEarthImage{
+    background-image : url('../images/earth.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 100vh;
+}
+.backgroundImageDashboard{
+    /* background-color: yellowgreen; */
+    background-image: url('../images/dashboard_2.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    padding-top: 63px;
+}
+.loginIcons {
+    padding-top: 4px;
+}
+.dashboardText{
+    color: white;
+    font-size: x-large;
+}
+.popOverLink {
+    cursor: pointer;
+}
+.userNamePadding{
+    padding-left: 10px;
+}
+.navbar {
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    box-shadow: 4px 6px 11px rgba(0, 0, 0, 0.3);
+    background-image: none;
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+}
+.navbar-brand, .nav-userIcon, .userNamePadding{
+    color: white !important;
 }

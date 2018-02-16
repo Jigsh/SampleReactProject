@@ -5,7 +5,7 @@ import TextField from './TextField.js';
 import Label from './Label.js';
 import ComboBox from './Combobox.js';
 import { connect } from 'react-redux'
-import * as register from './../modules/actions/register'
+import * as registerUser from './../modules/actions/register'
 import {bindActionCreators} from 'redux';
 import {
     BrowserRouter as Router,
@@ -31,15 +31,21 @@ class Register extends React.Component {
             preferName : ''
         }
         this.handleOnchange = this.handleOnchange.bind(this);
+        this.navigatetoURL = this.navigatetoURL.bind(this);
     }
 
     registerClicked() {
 
-         this.props.registerUser(this.state.reigsterUser).then( (isRegistered) =>{
+         Promise.resolve(this.props.registerUser(this.state.reigsterUser)).then( (response) =>{
           //   this.state.register = isRegistered;
-             console.log(isRegistered)
+             console.log(response)
 
          });
+    }
+
+    navigatetoURL(url) {
+        this.props.history.push(url);
+
     }
 
     handleOnchange(name,value) {
@@ -198,7 +204,7 @@ class Register extends React.Component {
                         <tr>
                             <td className="container-atos-logo-width align-text-center">
 							{'Are you already registered? '}
-                                <Link to="/login">Sign in</Link>
+                                <Link to="/login">Sing In </Link>
                             </td>
                             <td>
                                 <img
@@ -219,12 +225,12 @@ const style = {
 const mapStateToProps = (state) => {
     return {
 
-       registerObj: state.user
+       registerObj: state.register
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators(register,dispatch)
+    return bindActionCreators(registerUser,dispatch)
 
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Register);
