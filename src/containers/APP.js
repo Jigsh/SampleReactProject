@@ -8,6 +8,7 @@ import {
   } from 'react-router-dom';
 
 import createLazyContainer from 'react-lazy-import';
+import Weather1 from "./Weather1";
 const Loading = () => <div>Loading...</div>;
 // const Error = () => <div>Error!</div>;
  
@@ -38,7 +39,7 @@ class App extends Component {
                 <NavBar/>
                     <Switch>
                         <Route exact path="/login" component={Login}/>
-                        <Route exact path="/dashboard" component={Dashboard}/>
+                        <Route exact path="/weather" component={Weather1}/>
                         <Redirect from="/" to="/login" />
                     </Switch>
                 {this.props.login.showAlert ? <AlertComponent message={this.props.login.alertMessage}/> : "" }

@@ -99,7 +99,7 @@ class TableRow extends React.Component {
        if(value)
         this.state.changeTemp[index] = value; //this.setState({changeTemp:value});
        this.props.setTemp(value,index);
-        // console.log(this.state.reigsterUser.preferName +' *** '+ value);
+         console.log("values " + value);
     }
 
     validateText(value) {

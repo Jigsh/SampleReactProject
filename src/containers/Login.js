@@ -1,13 +1,9 @@
 import React from 'react';
 import {login} from '../modules/actions/LoginActions';
-import {getWeather} from '../modules/actions/weatheraction';
-import {submitWeather} from "../modules/actions/weatheraction";
-import {getCoOrdinate} from '../modules/actions/weatheraction';
-import {getValue} from '../modules/actions/UtilActions'
+
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
-import WeatherReport from './WeatherReport';
-import MapContainer from './MapContainer';
+
 
 import GoogleMapReact from 'google-map-react';
 import {
@@ -30,21 +26,12 @@ class Login extends React.Component {
             isLogin: false,
             cityCenter : {lat : 22.2587,
                 lng : 71.1924},
-            weatherObj : {
-                city : "",
-                list : [{
-                    date: "",
-                    expectedTemp : "",
-                    actualTemp : ""
-                }],
-
-            }
+   
         }
         this.onChange = this.onChange.bind(this);
         this.clearForm = this.clearForm.bind(this);
         this.loginClicked = this.loginClicked.bind(this);
-        this.showWeather = this.showWeather.bind(this);
-        this.approveTemp = this.approveTemp.bind(this);
+
         //this.hideAlert = this.clearForm.bind(this);
         console.log("Login");
     }
@@ -78,6 +65,11 @@ class Login extends React.Component {
             this.clearForm();
         }
         */
+
+       /* Promise.resolve(this.props.getValue()).then((response) => {
+            console.log("Value" + this.props.getterMethods.setterMethods);
+        });
+        */
     }
 
 
@@ -88,84 +80,18 @@ class Login extends React.Component {
                 console.log("Response " + response);
 
                 this.setState({isLogin:response});
-
+                this.props.history.push("/weather");
 
             })
 
         }
     }
 
-    showWeather () {
-
-        Promise.resolve(this.props.getWeather()).then((response) => {
-            if(this.props.weather.weather){
-                console.log("response" + this.props.weather.weather.cod);
-                conosle.log("coordinate" + this.props.weather.weather.city.coord);
-            }
-        })
-    }
-
-    approveTemp () {
-
-        //this.state.weatherObj.list[0].actualTemp = state.weather.actualTemp;
-        var i=0;
-        var weatherObj = {
-            city: "",
-            list: []
-        }
-        weatherObj.city = this.props.weather.weather.city.name;
-        var weatherByDateTime =
-        {
-            date: "",
-            expectedTemp: "",
-            actualTemp: ""
-        }
-        var changeTemp = this.state.changeTemp;
-
-        Promise.resolve(this.props.getValue()).then((response) => {
-            console.log("Value" + this.props.getterMethods.setterMethods);
-        });
-
-        var actualTemp = this.props.getterMethods.setterMethods
-        _.each(this.props.weather.weather.list,function(weathertemp){
-            var weatherByDateTime =
-                {
-                    date: "",
-                    expectedTemp: "",
-                    actualTemp: ""
-                }
-            weatherByDateTime.date = weathertemp.dt_txt;
-            weatherByDateTime.expectedTemp = weathertemp.main.temp;
-           weatherByDateTime.actualTemp = actualTemp;
-            weatherObj.list.push(weatherByDateTime);
-            i = i+1
-        })
-
-        this.state.weatherObj = weatherObj;
-
-
-
-        Promise.resolve(this.props.submitWeather(this.state.weatherObj)).then((response) =>{
-
-            console.log("Weather Response :" + response);
-        })
-
-    }
 
     render(){
-      const center = {
-            lat:19.0760,
-            leg:72.8777
-      }
+    
 
-        const style = {
-           width:'50%',
-            hieght:'50%'
-        }
-
-        if(!this.state.isLogin){
-
-            return (
+           return (
                 <div className="backgroundImageLogin">
                     <div className="container">
                         <div className="card card-container">
@@ -200,37 +126,7 @@ class Login extends React.Component {
                     </div>
                 </div>
             );
-        }else {
-            return(<div>
-                    <div>
-                        <span>{this.state.userName} Login Successfully</span>
-                    </div>
-                    <br/>
-                    <div>
-                        <button onClick={ () => this.showWeather()}>Show Weather</button>
 
-                    </div>
-                    <div>
-                        <table>
-                            <td><WeatherReport  className="" city={this.props.weather.weather !=undefined ? this.props.weather.weather.city.name : ''} list={this.props.weather.weather !=undefined ? this.props.weather.weather.list : '' }/></td>
-                            <td><MapContainer   style={style} cityCenter={this.props.weather.weather !=undefined && this.props.weather.weather != ''? this.props.weather.weather.city.coord : '' }/></td>
-
-                        </table>
-
-                    </div>
-                    <div>
-                        <button
-                            id="btn_app"
-                            type="button"
-                            className="midiumtextbox"
-                            onClick={() => this.approveTemp()}
-                        >Approve</button>
-
-                    </div>
-                </div>
-
-            );
-        }
     }
 }
 const mapStateToProps = (state) => {
@@ -244,6 +140,6 @@ const mapStateToProps = (state) => {
 
 
 function mapDispatchToProps (dispatch)  {
-    return  bindActionCreators({login,getWeather,getCoOrdinate,submitWeather,getValue},dispatch)
+    return  bindActionCreators({login},dispatch)
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Login);

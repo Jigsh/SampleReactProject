@@ -1,8 +1,9 @@
 import axios from 'axios';
-export const getWeather = () => {
+export const getWeather = (city) => {
     return dispatch => {
 
-        axios.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=059a4ef02f5da18b3e4f5ba95b5452c9").then((response) => {
+        axios.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=059a4ef02f5da18b3e4f5ba95b5452c9&q=" 
+    + city).then((response) => {
 
             dispatch({
                 type: "GET_WEATHER",

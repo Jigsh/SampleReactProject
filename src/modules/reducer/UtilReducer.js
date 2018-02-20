@@ -1,6 +1,6 @@
-
-const UtilReducer = (state={},action)  => {
-
+let tempValue = { tempValue : "", arrayOfValue : []};
+const UtilReducer = (state=tempValue,action)  => {
+debugger
     switch(action.type){
 
         case "SETTER" :

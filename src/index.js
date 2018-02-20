@@ -7,7 +7,8 @@ import {
 } from 'react-router-dom';
 
 import Register from './components/Register';
-import Login from './containers/Login'
+import Login from './containers/Login';
+import Weather from './containers/Weather';
 import { Provider } from 'react-redux';
 import store from './modules/reducer/store.js'
 
@@ -19,6 +20,7 @@ ReactDOM.render((
             <Route exact path="/" />
             <Route exact path="/login" component={Login}/>
             <Route exact path="/reg" component={Register}/>
+            <Route exact path="/weather" component={Weather}/>
               <Route exact path="/forgot" />
               <Route exact path="/home" />
 
